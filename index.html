@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="weather-bg" id="weatherBg"></div>
+
+    <div class="weather-popup" id="weatherPopup">
+        <span class="popup-icon" id="popupIcon">💡</span>
+        <div class="popup-text" id="popupText"></div>
+        <button class="popup-close" id="popupClose">✕</button>
+    </div>
+
+    <header>
+        <h1>🌤️ SkyCheck</h1>
+        <p>Get real-time weather for any city in the world</p>
+    </header>
+
+    <div class="container">
+        <div class="rainbow-border">
+            <div class="cute-character character-tl">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#ffa726">
+                        <polygon points="100,10 108,45 92,45"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(30 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(60 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(90 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(120 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(150 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(180 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(210 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(240 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(270 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(300 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(330 100 100)"/>
+                    </g>
+                    <circle cx="100" cy="90" r="48" fill="#ffd54f" stroke="#5e3fd1" stroke-width="4"/>
+                    <circle cx="84" cy="85" r="5" fill="#5e3fd1"/>
+                    <circle cx="116" cy="85" r="5" fill="#5e3fd1"/>
+                    <circle cx="78" cy="98" r="6" fill="#ff8a80" opacity="0.7"/>
+                    <circle cx="122" cy="98" r="6" fill="#ff8a80" opacity="0.7"/>
+                    <path d="M85 102 Q100 115 115 102" stroke="#5e3fd1" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M55 130 a20 20 0 0 1 38 -8 a16 16 0 0 1 17 4 a18 18 0 0 1 -2 35 H62 a18 18 0 0 1 -7 -31z"
+                          fill="#ffffff" stroke="#5e3fd1" stroke-width="4"/>
+                    <circle cx="78" cy="148" r="4" fill="#5e3fd1"/>
+                    <circle cx="105" cy="148" r="4" fill="#5e3fd1"/>
+                    <circle cx="73" cy="158" r="4" fill="#ff8a80" opacity="0.7"/>
+                    <circle cx="110" cy="158" r="4" fill="#ff8a80" opacity="0.7"/>
+                    <path d="M82 160 Q92 167 100 160" stroke="#5e3fd1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="cute-character character-br">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#ffa726">
+                        <polygon points="100,10 108,45 92,45"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(30 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(60 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(90 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(120 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(150 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(180 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(210 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(240 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(270 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(300 100 100)"/>
+                        <polygon points="100,10 108,45 92,45" transform="rotate(330 100 100)"/>
+                    </g>
+                    <circle cx="100" cy="90" r="48" fill="#ffd54f" stroke="#5e3fd1" stroke-width="4"/>
+                    <circle cx="84" cy="85" r="5" fill="#5e3fd1"/>
+                    <circle cx="116" cy="85" r="5" fill="#5e3fd1"/>
+                    <circle cx="78" cy="98" r="6" fill="#ff8a80" opacity="0.7"/>
+                    <circle cx="122" cy="98" r="6" fill="#ff8a80" opacity="0.7"/>
+                    <path d="M85 102 Q100 115 115 102" stroke="#5e3fd1" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M55 130 a20 20 0 0 1 38 -8 a16 16 0 0 1 17 4 a18 18 0 0 1 -2 35 H62 a18 18 0 0 1 -7 -31z"
+                          fill="#ffffff" stroke="#5e3fd1" stroke-width="4"/>
+                    <circle cx="78" cy="148" r="4" fill="#5e3fd1"/>
+                    <circle cx="105" cy="148" r="4" fill="#5e3fd1"/>
+                    <circle cx="73" cy="158" r="4" fill="#ff8a80" opacity="0.7"/>
+                    <circle cx="110" cy="158" r="4" fill="#ff8a80" opacity="0.7"/>
+                    <path d="M82 160 Q92 167 100 160" stroke="#5e3fd1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div class="weather-result" id="weatherResult">
+                <p>Search for a city to see the weather</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Made by Jaweria · Weather data from Open-Meteo
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
