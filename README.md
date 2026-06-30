@@ -18,13 +18,9 @@ Built as part of my ICT coursework using vanilla **HTML, CSS, and JavaScript**.
 - HTML5
 - CSS3 (animations, gradients, responsive design)
 - JavaScript (DOM manipulation, async/await, fetch API)
-- [Open-Meteo API](https://open-meteo.com/) — free weather and geocoding data (no API key required)
+- [Open-Meteo API](https://open-meteo.com/) — free weather and geocoding data (no API key required <!-- Replace # with your GitHub Pages link once enabled -->
 
-## 🚀 Live Demo
 
-[View Live Demo](#) <!-- Replace # with your GitHub Pages link once enabled -->
-
-## 📸 Preview
 
 <!-- Add a screenshot here once uploaded, e.g.: -->
 <!-- ![SkyCheck Preview](preview.png) -->
